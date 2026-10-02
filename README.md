@@ -51,7 +51,7 @@ The agent plans, searches, queries Postgres, drafts, then **pauses** and asks: a
 | **Loop back to search** | If a draft has no URLs, you'll see `↩ draft has no sources, looping back to search` (max 3 attempts so it can't loop forever). |
 | **Time-travel** | `python main.py history --thread demo1`, copy a `checkpoint=` id, then `python main.py replay --thread demo1 --checkpoint <id>`. |
 
-## Things worth knowing (trainer-question material)
+## Things worth knowing
 
 - **Why the thread ID matters:** same thread → continue that run; new thread → fresh run. It's also used as the ticket's `idempotency_key`, so resuming after a crash can never create a duplicate ticket.
 - **Why `interrupt()` code reruns:** on resume, the review node restarts from its top, so nothing with side effects goes before `interrupt()`.
