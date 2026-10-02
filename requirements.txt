@@ -1,0 +1,11 @@
+langgraph
+langgraph-checkpoint-sqlite
+aiosqlite
+langchain
+langchain-core
+langchain-openai        # swap for langchain-anthropic / langchain-google-genai if you use another model
+langchain-mcp-adapters
+langchain-tavily
+mcp
+python-dotenv
+pydantic
